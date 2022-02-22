@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - turret
-  - player
   - townhall
+  - player
   - enemy
+  - turret
   layers:
   - Default
   - TransparentFX
