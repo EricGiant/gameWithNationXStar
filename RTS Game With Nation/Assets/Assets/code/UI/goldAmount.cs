@@ -10,8 +10,8 @@ public class goldAmount : MonoBehaviour
 
     void Start()
     {
-        currency = GameObject.Find("goldAmount").GetComponent<currency>();
-        text = GetComponent<Text>();
+        currency = GetComponent<currency>();
+        text = GetComponentInChildren<Text>();
     }
 
     void Update()

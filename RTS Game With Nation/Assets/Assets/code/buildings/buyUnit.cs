@@ -8,7 +8,7 @@ public class buyUnit : MonoBehaviour
     int currentQueueUp;
     void Start()
     {
-        playerCurrency = GameObject.Find("goldAmount").GetComponent<currency>();
+        playerCurrency = GameObject.Find("goldCounter").GetComponent<currency>();
     }
     //reusable function that can be used for every unit buy
     public void buy(GameObject unit, int price, float QueueUpTime, string whichTeam)

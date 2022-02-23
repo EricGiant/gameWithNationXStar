@@ -13,7 +13,7 @@ public class townHall : MonoBehaviour
     {
         if(isPlayer)
         {
-            gold = GameObject.Find("goldAmount").GetComponent<currency>();
+            gold = GameObject.Find("goldCounter").GetComponent<currency>();
             StartCoroutine(giveGold());
         }
         else

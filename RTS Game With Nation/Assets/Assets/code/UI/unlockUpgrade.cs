@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class unlockUpgrade : MonoBehaviour
 {
+
+    //REWORK
+
+
     public bool upgradeUnit; //false = unit1 true = unit2
     public bool isNonUnitBuildng; //false = unit building true = non unit buildings aka Townhall and Turrets
     public int price;

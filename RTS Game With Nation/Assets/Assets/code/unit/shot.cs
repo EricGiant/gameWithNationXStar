@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class shot : MonoBehaviour
 {
+    //REWORK THSI WITH AI
     unitAI AI;
     public float moveSpeed;
     float damage;
