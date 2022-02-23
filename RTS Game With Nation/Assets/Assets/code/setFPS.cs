@@ -7,5 +7,6 @@ public class setFPS : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 200;
+        
     }
 }
