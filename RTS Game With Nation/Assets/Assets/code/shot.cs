@@ -29,7 +29,7 @@ public class shot : MonoBehaviour
                 {
                     damage = AI.damage * 1.5f;
                 }
-                //AI.goTo.gameObject.GetComponent<unitAI>().health -= damage;
+
             }
             else if(AI.goTo.name == "soldier" || AI.goTo.name == "rocketeer")
             {
@@ -41,9 +41,8 @@ public class shot : MonoBehaviour
                 {
                     damage = AI.damage * 0.5f;
                 }
-                //AI.goTo.gameObject.GetComponent<unitAI>().health -= damage;
             }
-            else if(AI.goTo.name == "turret")
+            else if(AI.goTo.tag == "turret")
             {
                 if(AI.name == "soldier" || AI.name == "humvee" || AI.name == "helicopter")
                 {
@@ -53,7 +52,6 @@ public class shot : MonoBehaviour
                 {
                     damage = AI.damage * 1.5f;
                 }
-                AI.goTo.gameObject.GetComponent<turretAI>().health -= damage;
             }
             else if(AI.goTo.name == "townHall")
             {
@@ -65,8 +63,8 @@ public class shot : MonoBehaviour
                 {
                     damage = AI.damage * 1.5f;
                 }
-                //AI.goTo.gameObject.GetComponent<townHall>().health -= damage;
             }
+            AI.goTo.GetComponent<objectStats>().health -= damage;
             Debug.Log("deal damage to " + AI.goTo.name + "\n" + "base dmg " + AI.damage + " dealt dmg " + damage);
             Destroy(gameObject);
         }
