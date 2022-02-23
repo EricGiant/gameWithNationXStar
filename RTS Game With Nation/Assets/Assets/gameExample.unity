@@ -194,7 +194,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146908459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1993495905}
@@ -203,8 +203,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -477, y: 254}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -505.1, y: 200.6}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146908461
 MonoBehaviour:
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5459b3a707c7e764291a6c9744bcfac6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1302,7 +1302,7 @@ GameObject:
   - component: {fileID: 833397574}
   m_Layer: 0
   m_Name: ShakeManager
-  m_TagString: Untagged
+  m_TagString: ShakeManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1333,6 +1333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce82094259eea44e86dff8e73be345a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camAnim: {fileID: 575948764}
 --- !u!1 &872108748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,7 +3084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 147, y: 0}
+  m_AnchoredPosition: {x: 61.15, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5000002, y: 0.5}
 --- !u!114 &1993495906
@@ -3120,11 +3121,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 31
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

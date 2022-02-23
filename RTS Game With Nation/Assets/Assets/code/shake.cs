@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Vuforia;
+using UnityEditor.Animations;
 
 public class Shake : MonoBehaviour
 {
@@ -10,6 +10,4 @@ public class Shake : MonoBehaviour
   public void CamShake(){
       camAnim.SetTrigger("shake");
   }
-
-  
 }

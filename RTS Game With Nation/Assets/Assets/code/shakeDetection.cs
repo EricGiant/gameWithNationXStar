@@ -5,18 +5,17 @@ public class shakeDetection : MonoBehaviour
     public float ShakeDetectionThreshold;
     public float MinShakeInterval;
 
-    private float sqrShakeDetectionThreshold;
-    private float timeSinceLastShake;
+    float sqrShakeDetectionThreshold;
+    float timeSinceLastShake;
 
-    private Shake shake;
+    Shake shake;
     void Start()
     {
         sqrShakeDetectionThreshold = Mathf.Pow(ShakeDetectionThreshold, 2);
-        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        shake = GameObject.FindGameObjectWithTag("ShakeManager").GetComponent<Shake>();
     }
 
-    // Update is called once per frame
-    void Update()
+       void Update()
     {
         if (Input.acceleration.sqrMagnitude >= sqrShakeDetectionThreshold 
         && Time.unscaledTime >= timeSinceLastShake + MinShakeInterval)
