@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8648811646980450438}
   - component: {fileID: 8648811646980450433}
   - component: {fileID: -1421523164732928012}
+  - component: {fileID: 9052588082216486721}
   m_Layer: 0
   m_Name: tank
   m_TagString: Untagged
@@ -76,7 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0faa46c2fa9f247459510ae0dc8042c8, type: 3}
+  m_Sprite: {fileID: -6096986306976249623, guid: fa18aa59cf66e9a4986d2a1894221f8a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4027c508138c6c743af08a465ef075a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   damage: 50
   moveSpeed: 0.04
   fireRate: 1.5
@@ -146,7 +147,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.94, y: 1.58}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -155,6 +156,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9052588082216486721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648811646980450437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c573a7807941ca64e937986dc13da12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &8648811647398494079
 GameObject:
   m_ObjectHideFlags: 0

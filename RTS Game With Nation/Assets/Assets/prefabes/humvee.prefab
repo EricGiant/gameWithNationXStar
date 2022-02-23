@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 1571618130162111445}
   - component: {fileID: 1571618130162111442}
   - component: {fileID: 1571618130162111443}
+  - component: {fileID: -3210203301728343665}
   - component: {fileID: 1571618130162111444}
   - component: {fileID: -5862528132729460177}
   m_Layer: 0
@@ -136,7 +137,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0faa46c2fa9f247459510ae0dc8042c8, type: 3}
+  m_Sprite: {fileID: 6718589845817947076, guid: fa18aa59cf66e9a4986d2a1894221f8a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,7 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4027c508138c6c743af08a465ef075a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 75
   damage: 20
   moveSpeed: 0.06
   fireRate: 0.4
@@ -168,6 +169,19 @@ MonoBehaviour:
   goTo: {fileID: 0}
   shot: {fileID: 4885845698264045895, guid: cc5b3ce5eeb6b444cb5f148cfe61cd91, type: 3}
   shoot: 0
+--- !u!114 &-3210203301728343665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571618130162111440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c573a7807941ca64e937986dc13da12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 75
 --- !u!50 &1571618130162111444
 Rigidbody2D:
   serializedVersion: 4
@@ -206,7 +220,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.93, y: 1.21}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 616164026465080815}
   - component: {fileID: 616164026465080812}
   - component: {fileID: 616164026465080813}
+  - component: {fileID: 5368941619980670411}
   m_Layer: 0
   m_Name: townHall
   m_TagString: townhall
@@ -96,7 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7c49476f6277b4d88c194cf384a22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
   waitTime: 7
   amountGiven: 500
   isPlayer: 0
@@ -126,3 +126,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5368941619980670411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616164026465079825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c573a7807941ca64e937986dc13da12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000

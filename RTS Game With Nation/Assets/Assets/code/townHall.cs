@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class townHall : MonoBehaviour
 {
-    public float health;
     public float waitTime;
     public int amountGiven;
     currency gold;
@@ -22,13 +21,6 @@ public class townHall : MonoBehaviour
             gameObject.AddComponent<enemyAI>();
         }
     }
-    void Update()
-    {
-        if(health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     IEnumerator giveGold()
     {
@@ -39,6 +31,4 @@ public class townHall : MonoBehaviour
             Debug.Log("give gold");
         }
     }
-
-    
 }

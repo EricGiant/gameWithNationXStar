@@ -2,5 +2,6 @@ Eric:
 - make turret shooting code
 - remake the unit bullet code
 - change the HP system of units/buildings and add it into 1 script called Stats
+- add tw/turret upgrades
 
 nation:

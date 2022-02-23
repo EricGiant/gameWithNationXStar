@@ -20,7 +20,7 @@ public class turretShot : MonoBehaviour
         if(transform.position == AI.goTo.position)
         {
             damage = AI.damage;
-            AI.goTo.gameObject.GetComponent<unitAI>().health -= damage;
+            //AI.goTo.gameObject.GetComponent<unitAI>().health -= damage;
             Debug.Log("deal damage to " + AI.goTo.name + "\n" + "base dmg " + AI.damage + " dealt dmg " + damage);
             Destroy(gameObject);
         }

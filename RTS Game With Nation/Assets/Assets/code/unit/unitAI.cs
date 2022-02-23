@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class unitAI : MonoBehaviour
 {
-    public float health, damage, moveSpeed, fireRate, detectionSize, shootSize;
+    public float damage, moveSpeed, fireRate, detectionSize, shootSize;
     public Transform goTo;
     public GameObject shot;
     public bool shoot;
@@ -24,13 +24,7 @@ public class unitAI : MonoBehaviour
         shootRange.radius = shootSize;
         detectionRange.radius = detectionSize;
     }
-    void Update()
-    {
-        if(health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+
     void FixedUpdate()
     {
         //if the object it was going to is destroyed it will return null
@@ -40,6 +34,11 @@ public class unitAI : MonoBehaviour
             findTurrets();
             return;
         }
+        Vector3 dir = transform.position - goTo.position;
+        float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+       // transform.rotation.eulerAngles += new Vector3(0, 0, 0);
+        gameObject.transform.eulerAngles += new Vector3(0, 0, -90);
         //move unit to the target
         transform.position = Vector2.MoveTowards(transform.position, goTo.position, moveSpeed);
     }
