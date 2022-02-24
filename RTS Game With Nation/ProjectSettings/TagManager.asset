@@ -9,6 +9,8 @@ TagManager:
   - enemy
   - turret
   - ShakeManager
+  - VibOn
+  - VibOff
   layers:
   - Default
   - TransparentFX
