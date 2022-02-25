@@ -11,6 +11,11 @@ public class unitBullet : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(goTo == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         transform.position = Vector2.MoveTowards(transform.position, goTo.position, moveSpeed);
         if(transform.position == goTo.position)
         {

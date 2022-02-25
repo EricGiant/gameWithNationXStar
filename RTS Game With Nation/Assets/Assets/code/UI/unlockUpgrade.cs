@@ -5,45 +5,56 @@ using UnityEngine.UI;
 
 public class unlockUpgrade : MonoBehaviour
 {
+    public float price, healthIncrease;
+    public int incomeIncrease;
 
-    //REWORK
-
-
-    public bool upgradeUnit; //false = unit1 true = unit2
-    public bool isNonUnitBuildng; //false = unit building true = non unit buildings aka Townhall and Turrets
-    public int price;
-    public GameObject building;
-    currency playerCurrency;
-    Button button;
-    void Start()
+    public void unlockMiniGun()
     {
-        playerCurrency = GameObject.Find("goldAmount").GetComponent<currency>();
-        button = GetComponent<Button>();
-    }
-    public void buyUpgrade()
-    {
-        if(price > playerCurrency.gold)
+        if(GameObject.Find("goldCounter").GetComponent<currency>().gold > price)
         {
-            Debug.Log("Cant buy upgrade");
+            Debug.Log("cant buy minigun");
             return;
         }
-        playerCurrency.gold -= price;
-        button.onClick.RemoveAllListeners();
-        if(isNonUnitBuildng)
+        foreach(turretAI_V2 go in GameObject.Find("playerTurrets").GetComponentsInChildren<turretAI_V2>())
         {
-            //button.onClick.AddListener() will be to upgrade buildings later
+            go.hasMiniGun = true;
         }
-        else
+        GetComponent<Button>().interactable = false;
+    }
+
+    public void unlockCannon()
+    {
+        if(GameObject.Find("goldCounter").GetComponent<currency>().gold > price)
         {
-            if(upgradeUnit)
-            {
-                button.onClick.AddListener(building.GetComponent<unitBuilding>().buyUnit2);
-                //button.colors.normalColor = new Color(1, 1, 1, 1);
-            }           
-            else
-            {
-                button.onClick.AddListener(building.GetComponent<unitBuilding>().buyUnit1);
-            }
-        }        
+            Debug.Log("cant buy cannon");
+            return;
+        }
+        foreach(turretAI_V2 go in GameObject.Find("playerTurrets").GetComponentsInChildren<turretAI_V2>())
+        {
+            go.hasCannon = true;
+        }
+        GetComponent<Button>().interactable = false;
+    }
+
+    public void upgradeHealth()
+    {
+        if(GameObject.Find("goldCounter").GetComponent<currency>().gold > price)
+        {
+            Debug.Log("cant upgrade health");
+            return;
+        }
+        GameObject.Find("playerBuildings").transform.GetChild(0).GetComponent<objectStats>().health += healthIncrease;
+        GetComponent<Button>().interactable = false;
+    }
+
+    public void upgradeIncome()
+    {
+        if(GameObject.Find("goldCounter").GetComponent<currency>().gold > price)
+        {
+            Debug.Log("cant upgrade income");
+            return;
+        }
+        GameObject.Find("playerBuildings").transform.GetChild(0).GetComponent<townHall>().amountGiven += incomeIncrease;
+        GetComponent<Button>().interactable = false;
     }
 }
