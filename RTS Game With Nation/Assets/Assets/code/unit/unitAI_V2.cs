@@ -13,6 +13,7 @@ public class unitAI_V2 : MonoBehaviour
     void Start()
     {
         transform.GetChild(0).GetComponent<CircleCollider2D>().radius = shootRange;
+        transform.GetChild(1).GetComponent<CircleCollider2D>().radius = detectionRange;
     }
     void FixedUpdate()
     {
@@ -20,6 +21,7 @@ public class unitAI_V2 : MonoBehaviour
         //when this happens check for a new thing to find which will be a turret
         if(goTo == null)
         {
+            canShoot = false;
             findTarget();
             return;
         }

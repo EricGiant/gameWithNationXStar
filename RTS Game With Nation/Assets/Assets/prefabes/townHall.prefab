@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 7
-  amountGiven: 500
+  amountGiven: 400
   isPlayer: 0
 --- !u!61 &616164026465080813
 BoxCollider2D:

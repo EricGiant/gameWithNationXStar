@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemyAI : MonoBehaviour
 {
-    float waitTime = 10;
+    float waitTime = 4;
     unitBuilding[] unitBuildings;
 
     void Start()
@@ -18,6 +18,7 @@ public class enemyAI : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(waitTime);
+            waitTime = 8;
             Debug.Log("spawn wave");
             int spawnAmount = Random.Range(2, 9);
             for(int i = 0; i < spawnAmount; i++)

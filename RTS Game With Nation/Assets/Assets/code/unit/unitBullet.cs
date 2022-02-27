@@ -17,7 +17,9 @@ public class unitBullet : MonoBehaviour
             return;
         }
         transform.position = Vector2.MoveTowards(transform.position, goTo.position, moveSpeed);
-        if(transform.position == goTo.position)
+        //for some weird reason the z axis is 0 for the unit bullet and -5 for the goto when it's a turret
+        //so it will just look for x and y
+        if(transform.position.x == goTo.position.x && transform.position.y == goTo.position.y)
         {
             if(AI.name == "soldier" || AI.name == "humvee" || AI.name == "helicopter")
             {
