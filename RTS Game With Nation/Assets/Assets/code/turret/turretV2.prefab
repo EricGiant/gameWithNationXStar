@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4027947019665426371}
   - component: {fileID: 4027947019665426369}
   - component: {fileID: 4027947019665426370}
+  - component: {fileID: 2597448637565962085}
   m_Layer: 0
   m_Name: turretV2
   m_TagString: turret
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 400
+  vibrator: {fileID: 2597448637565962085}
 --- !u!61 &4027947019665426370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,6 +126,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2597448637565962085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4027947019665426381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c2e024592359e42a47661753445ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4027947020207721259
 GameObject:
   m_ObjectHideFlags: 0
