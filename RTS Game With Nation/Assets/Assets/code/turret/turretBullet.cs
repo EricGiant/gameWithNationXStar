@@ -16,6 +16,9 @@ public class turretBullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        Vector3 dir = transform.position - goTo.position;
+        float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.position = Vector2.MoveTowards(transform.position, goTo.position, moveSpeed);
         if(transform.position == goTo.position)
         {

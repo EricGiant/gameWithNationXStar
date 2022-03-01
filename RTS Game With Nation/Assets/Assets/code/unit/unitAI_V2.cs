@@ -14,6 +14,10 @@ public class unitAI_V2 : MonoBehaviour
     {
         transform.GetChild(0).GetComponent<CircleCollider2D>().radius = shootRange;
         transform.GetChild(1).GetComponent<CircleCollider2D>().radius = detectionRange;
+        if(tag == "enemy")
+        {
+            GetComponent<SpriteRenderer>().color = Color.red;
+        }
     }
     void FixedUpdate()
     {
@@ -25,6 +29,9 @@ public class unitAI_V2 : MonoBehaviour
             findTarget();
             return;
         }
+        Vector3 dir = transform.position - goTo.position;
+        float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         transform.position = Vector2.MoveTowards(transform.position, goTo.position, moveSpeed);
     }
 

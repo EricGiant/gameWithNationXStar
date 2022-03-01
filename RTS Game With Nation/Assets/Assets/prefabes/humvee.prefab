@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1571618130162111440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1571618130870207533}
   - {fileID: 4648284430166351668}
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.3}
+    oldSize: {x: 0.775, y: 1}
     newSize: {x: 1, y: 1.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
+  vibrator: {fileID: 0}
 --- !u!114 &4693978748935950911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,8 +165,8 @@ MonoBehaviour:
   moveSpeed: 0.06
   fireRate: 0.4
   damage: 20
-  detectionRange: 6
-  shootRange: 4
+  detectionRange: 3
+  shootRange: 2
   canShoot: 0
   bullet: {fileID: 1944847441598328430, guid: 5735c6d87db653e4aa97b16f7689ca6e, type: 3}
 --- !u!1 &1571618130870207530
