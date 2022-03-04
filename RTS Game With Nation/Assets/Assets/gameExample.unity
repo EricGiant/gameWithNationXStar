@@ -2355,7 +2355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 579bd43923fc9794e8203570e0610c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 700
+  price: 600
   healthIncrease: 0
   incomeIncrease: 300
 --- !u!1001 &702640905
