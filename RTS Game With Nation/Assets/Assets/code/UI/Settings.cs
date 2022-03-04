@@ -7,6 +7,7 @@ public class Settings : MonoBehaviour
     private static bool GameisPaused = false;
     private bool Vibration;
     public Text VibrationText;
+    //allows you to turn of vibaration
     public void ChangeVibration(){
         if (Vibration == true){
             Vibration = false;
@@ -19,7 +20,7 @@ public class Settings : MonoBehaviour
             Debug.Log("Vibration on");
         }
     }
-    
+    //pausess game
     public void Pause(){
         if (GameisPaused)
         {

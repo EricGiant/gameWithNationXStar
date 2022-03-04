@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class objectStats : MonoBehaviour
 {
+    //holds health for every object in the game
     public float health;
     public Vibrator vibrator;
 
@@ -11,6 +12,7 @@ public class objectStats : MonoBehaviour
     {
         if(health <= 0)
         {
+            //checks if object has to cause vibration on death
             if(!(vibrator == null))
             {
                 vibrator.Vibrate();

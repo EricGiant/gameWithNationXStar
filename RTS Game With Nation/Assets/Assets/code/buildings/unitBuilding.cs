@@ -24,7 +24,7 @@ public class unitBuilding : MonoBehaviour
             whichTeam = "player";
         }
     }
-    //functions that can be activated through buttons to do the unit buyying
+    //functions that can be activated through buttons to do the unit buying
     public void buyUnit1()
     {
         buyScripts[0].buy(unit1Go, unit1Price, unit1QueueUpTime, whichTeam);

@@ -8,6 +8,8 @@ public class goldAmount : MonoBehaviour
     currency currency;
     Text text;
 
+    //updates gold counter
+
     void Start()
     {
         currency = GetComponent<currency>();

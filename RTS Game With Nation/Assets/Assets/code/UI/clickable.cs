@@ -8,6 +8,7 @@ public class clickable : MonoBehaviour
     public int toEnable;
     void Start()
     {
+        //find all 5 buttons
         for(int i = 0; i < 5; i++)
         {
             buttons.Add(GameObject.Find("rightButtons").transform.GetChild(i));
@@ -15,6 +16,7 @@ public class clickable : MonoBehaviour
     }
     void OnMouseDown()
     {
+        //when clicked disable all objects and enable the 1 that has to be enabled
         foreach(Transform go in buttons)
         {
             go.gameObject.SetActive(false);

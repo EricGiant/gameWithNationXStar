@@ -17,6 +17,7 @@ public class shakeDetection : MonoBehaviour
 
        void Update()
     {
+        //check if phone is shaking enough for code to be activated
         if (Input.acceleration.sqrMagnitude >= sqrShakeDetectionThreshold 
         && Time.unscaledTime >= timeSinceLastShake + MinShakeInterval)
         {
