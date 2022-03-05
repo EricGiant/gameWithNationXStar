@@ -4689,7 +4689,7 @@ PrefabInstance:
     - target: {fileID: 616164026465079825, guid: dc63187833250254c9c6b221a3720bad,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 616164026465080812, guid: dc63187833250254c9c6b221a3720bad,
         type: 3}
@@ -4785,6 +4785,11 @@ PrefabInstance:
     - target: {fileID: 616164026465080815, guid: dc63187833250254c9c6b221a3720bad,
         type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368941619980670411, guid: dc63187833250254c9c6b221a3720bad,
+        type: 3}
+      propertyPath: isTownhall
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7149,6 +7154,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: eb192f3ba87895040a25c4730571407d,
         type: 3}
+    - target: {fileID: 5368941619980670411, guid: dc63187833250254c9c6b221a3720bad,
+        type: 3}
+      propertyPath: isTownhall
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc63187833250254c9c6b221a3720bad, type: 3}
 --- !u!4 &1767462134 stripped
