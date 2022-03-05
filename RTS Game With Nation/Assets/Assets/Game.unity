@@ -713,7 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93d6377727c81d48871e471f510253f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toEnable: 1
+  toEnable: 2
 --- !u!61 &225480125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93d6377727c81d48871e471f510253f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toEnable: 1
+  toEnable: 2
 --- !u!61 &295250959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3972,7 +3972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93d6377727c81d48871e471f510253f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toEnable: 2
+  toEnable: 3
 --- !u!61 &966414556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4176,6 +4176,11 @@ PrefabInstance:
     - target: {fileID: 8093996987518392445, guid: 4175840b67cda3241bfb90f1bbed7361,
         type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093996987518392445, guid: 4175840b67cda3241bfb90f1bbed7361,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4689,7 +4694,7 @@ PrefabInstance:
     - target: {fileID: 616164026465079825, guid: dc63187833250254c9c6b221a3720bad,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 616164026465080812, guid: dc63187833250254c9c6b221a3720bad,
         type: 3}
@@ -5314,7 +5319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93d6377727c81d48871e471f510253f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toEnable: 1
+  toEnable: 2
 --- !u!61 &1257672399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5518,7 +5523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93d6377727c81d48871e471f510253f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toEnable: 3
+  toEnable: 0
 --- !u!61 &1312197718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5922,6 +5927,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341257492201442201, guid: e1c4d3abbffa7624ba72ade9e8c237c2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c4d3abbffa7624ba72ade9e8c237c2, type: 3}
