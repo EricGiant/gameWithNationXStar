@@ -5,7 +5,7 @@ using UnityEngine;
 public class unitShootingRange : MonoBehaviour
 {
     unitAI_V2 AI;
-    float oldMoveSpeed;
+    public float oldMoveSpeed;
 
     void Start()
     {

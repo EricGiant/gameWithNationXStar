@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
+    public GameObject MusicA,MusicB;
     private static bool GameisPaused = false;
-    private bool Vibration;
+    public static bool Vibration;
     private bool Music;
     public Text VibrationText;
     //allows you to turn of vibaration
@@ -25,14 +26,14 @@ public class Settings : MonoBehaviour
     public void ChangeMusic(){
         if (Music == true){
             Music = false;
-            GameObject.FindGameObjectWithTag("MusicB").SetActive(true);
-            GameObject.FindGameObjectWithTag("MusicA").SetActive(false); 
+            MusicB.SetActive(true);
+            MusicA.SetActive(false); 
             }
           
         else {
             Music = true;
-            GameObject.FindGameObjectWithTag("MusicB").SetActive(false); 
-            GameObject.FindGameObjectWithTag("MusicA").SetActive(true); 
+            MusicB.SetActive(false); 
+            MusicA.SetActive(true); 
             
         }
     }

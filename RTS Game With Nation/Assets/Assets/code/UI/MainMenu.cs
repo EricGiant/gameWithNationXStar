@@ -5,14 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
-public void GotoMainScene()
-{
-SceneManager.LoadScene("Game");
-}
 
-public void GotoMenuScene()
-{
-SceneManager.LoadScene("MainMenu");
-}
+    public void ChangeScene(int sceneNumber){
+        StartCoroutine(gameScene(sceneNumber));
+    }
+    
+    IEnumerator gameScene(int sceneNumber){
+        Scene currentScene = SceneManager.GetActiveScene();
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneNumber, LoadSceneMode.Additive);
+        while(!asyncLoad.isDone)
+        {
+            if(asyncLoad.progress <= 0.9f){
+                Debug.Log("Loading Scene");
+            }
+            yield return null;                         
+        }
+        SceneManager.UnloadSceneAsync(currentScene);
+    }
 }
