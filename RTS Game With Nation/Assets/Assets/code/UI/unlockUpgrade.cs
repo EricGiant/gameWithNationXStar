@@ -49,7 +49,10 @@ public class unlockUpgrade : MonoBehaviour
             return;
         }
         GameObject.Find("goldCounter").GetComponent<currency>().gold -= price;
-        GameObject.Find("playerBuildings").transform.GetChild(0).GetComponent<objectStats>().health += healthIncrease;
+        GameObject playerBuildings = GameObject.Find("playerBuildings").transform.GetChild(0).gameObject;
+        playerBuildings.GetComponent<objectStats>().health += healthIncrease;
+        playerBuildings.GetComponent<townHall>().level++;
+        playerBuildings.GetComponent<townHall>().selectTexture();
         GetComponent<Button>().interactable = false;
     }
 
@@ -61,7 +64,10 @@ public class unlockUpgrade : MonoBehaviour
             return;
         }
         GameObject.Find("goldCounter").GetComponent<currency>().gold -= price;
-        GameObject.Find("playerBuildings").transform.GetChild(0).GetComponent<townHall>().amountGiven += incomeIncrease;
+        GameObject playerBuildings = GameObject.Find("playerBuildings").transform.GetChild(0).gameObject;
+        playerBuildings.GetComponent<townHall>().amountGiven += incomeIncrease;
+        playerBuildings.GetComponent<townHall>().level++;
+        playerBuildings.GetComponent<townHall>().selectTexture();
         GetComponent<Button>().interactable = false;
     }
 }

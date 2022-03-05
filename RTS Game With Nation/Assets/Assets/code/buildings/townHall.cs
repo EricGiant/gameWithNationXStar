@@ -8,6 +8,8 @@ public class townHall : MonoBehaviour
     public int amountGiven;
     currency gold;
     public bool isPlayer; //check if TW is player or enemy
+    public int level;
+    public Sprite[] textures;
 
     void Start()
     {
@@ -22,6 +24,13 @@ public class townHall : MonoBehaviour
         {
             gameObject.AddComponent<enemyAI>();
         }
+    }
+    
+    //select the right texture
+    //because there are only 2 textures you have to do -1 to find the right 1
+    public void selectTexture()
+    {
+        GetComponent<SpriteRenderer>().sprite = textures[level - 1];
     }
 
     IEnumerator giveGold()
