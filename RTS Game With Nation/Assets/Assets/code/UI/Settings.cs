@@ -6,6 +6,7 @@ public class Settings : MonoBehaviour
 {
     private static bool GameisPaused = false;
     private bool Vibration;
+    private bool Music;
     public Text VibrationText;
     //allows you to turn of vibaration
     public void ChangeVibration(){
@@ -20,7 +21,22 @@ public class Settings : MonoBehaviour
             Debug.Log("Vibration on");
         }
     }
-    //pausess game
+    //Change between 2 songs
+    public void ChangeMusic(){
+        if (Music == true){
+            Music = false;
+            GameObject.FindGameObjectWithTag("MusicB").SetActive(true);
+            GameObject.FindGameObjectWithTag("MusicA").SetActive(false); 
+            }
+          
+        else {
+            Music = true;
+            GameObject.FindGameObjectWithTag("MusicB").SetActive(false); 
+            GameObject.FindGameObjectWithTag("MusicA").SetActive(true); 
+            
+        }
+    }
+    //pauses game
     public void Pause(){
         if (GameisPaused)
         {

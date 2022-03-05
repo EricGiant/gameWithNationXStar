@@ -11,6 +11,8 @@ TagManager:
   - ShakeManager
   - VibOn
   - VibOff
+  - MusicB
+  - MusicA
   layers:
   - Default
   - TransparentFX
