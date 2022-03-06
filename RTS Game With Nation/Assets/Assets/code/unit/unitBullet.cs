@@ -18,7 +18,7 @@ public class unitBullet : MonoBehaviour
         }
         Vector3 dir = transform.position - goTo.position;
         float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         transform.position = Vector2.MoveTowards(transform.position, goTo.position, moveSpeed);
         // // //for some weird reason the z axis is 0 for the unit bullet and -5 for the goto when it's a turret
         // // //so it will just look for x and y
