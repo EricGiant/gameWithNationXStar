@@ -8,7 +8,7 @@ public class objectStats : MonoBehaviour
     public float health;
     public Vibrator vibrator;
     public bool isTownhall;
-    public GameObject vicScreen, defScreen, hud, goldCounter, goToMainMenu;
+    public GameObject vicScreen, defScreen;
 
     void Update()
     {
@@ -22,26 +22,19 @@ public class objectStats : MonoBehaviour
             //checks if object is townhall when killed and then if victory/defeat screen has to pop up
             if(isTownhall)
             {
-                //check if townhall is player
+                //check is townhall is player
                 //if it's player enable defeat screen
                 //if enemy enable victory screen
                 if(GetComponent<townHall>().isPlayer)
                 {
                     defScreen.SetActive(true);
-                    hud.SetActive(false);
-                    goldCounter.SetActive(false);
-                    
                 }
                 else
                 {
                     vicScreen.SetActive(true);
-                    hud.SetActive(false);
-                    goldCounter.SetActive(false);
-                    
                 }
             }
             Destroy(gameObject);
         }
     }
-    
 }
