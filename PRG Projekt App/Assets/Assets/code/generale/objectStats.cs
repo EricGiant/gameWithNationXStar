@@ -8,7 +8,7 @@ public class objectStats : MonoBehaviour
     public float health;
     public Vibrator vibrator;
     public bool isTownhall;
-    public GameObject vicScreen, defScreen, hud, goldCounter, goToMainMenu;
+    public GameObject vicScreen, defScreen, hud, goldCounter;
 
     void Update()
     {
@@ -30,6 +30,7 @@ public class objectStats : MonoBehaviour
                     defScreen.SetActive(true);
                     hud.SetActive(false);
                     goldCounter.SetActive(false);
+                    Time.timeScale = 0f;
                     
                 }
                 else
@@ -37,6 +38,7 @@ public class objectStats : MonoBehaviour
                     vicScreen.SetActive(true);
                     hud.SetActive(false);
                     goldCounter.SetActive(false);
+                    Time.timeScale = 0f;
                     
                 }
             }
