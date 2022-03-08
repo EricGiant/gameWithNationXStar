@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1998046135539697675}
   - component: {fileID: -1340499264682204065}
   - component: {fileID: 4358366152447467925}
-  - component: {fileID: 5229791984370418380}
+  - component: {fileID: 4758289207147460829}
   m_Layer: 0
   m_Name: helicopter
   m_TagString: Untagged
@@ -149,7 +149,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 80
   vibrator: {fileID: 0}
---- !u!114 &5229791984370418380
+  isTownhall: 0
+  vicScreen: {fileID: 0}
+  defScreen: {fileID: 0}
+  hud: {fileID: 0}
+  goldCounter: {fileID: 0}
+--- !u!114 &4758289207147460829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,17 +163,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998046135539697679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f7206a7e5ca6d74a9c69a709fae9748, type: 3}
+  m_Script: {fileID: 11500000, guid: f694629c3db02e647b217d421a316eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   goTo: {fileID: 0}
-  moveSpeed: 0.06
-  fireRate: 0.4
+  detection: {fileID: 5063501560236996779}
+  shootingRange: {fileID: 1998046136020688883}
+  bullet: {fileID: 3313625425931270447, guid: 3fb07cad2d828dd428e797bf5b8c2ae1, type: 3}
   damage: 20
+  fireRate: 0.4
+  moveSpeed: 0.06
   detectionRange: 3.5
-  shootRange: 2
-  canShoot: 0
-  bullet: {fileID: 1944847441598328430, guid: 5735c6d87db653e4aa97b16f7689ca6e, type: 3}
+  shootingRange_value: 2
 --- !u!1 &1998046136020688885
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998046136020688882}
   - component: {fileID: 1998046136020688883}
-  - component: {fileID: 522200098687408577}
+  - component: {fileID: 7032277715836069906}
   m_Layer: 0
   m_Name: shootingRange
   m_TagString: Untagged
@@ -217,7 +223,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.0001
---- !u!114 &522200098687408577
+--- !u!114 &7032277715836069906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,9 +232,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998046136020688885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560039a124db86d408ca01fd5f2342e8, type: 3}
+  m_Script: {fileID: 11500000, guid: c7437b202aa453d4eb10a29fb1e0786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AI: {fileID: 4758289207147460829}
 --- !u!1 &5784336380544219922
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,8 +245,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9190059023432511114}
-  - component: {fileID: 4939816664193683197}
   - component: {fileID: 5063501560236996779}
+  - component: {fileID: 2372014299864365669}
   m_Layer: 0
   m_Name: detectionRange
   m_TagString: Untagged
@@ -261,18 +268,6 @@ Transform:
   m_Father: {fileID: 1998046135539697674}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4939816664193683197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5784336380544219922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6de10ad8ecdce439b3fd7071c4d9fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &5063501560236996779
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -289,3 +284,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2372014299864365669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784336380544219922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9972012a6480234a90343e5332a0dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AI: {fileID: 4758289207147460829}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2892741984636488382}
   - component: {fileID: 2892741984636488383}
-  - component: {fileID: 6996825524550747648}
+  - component: {fileID: 4470769873337815374}
   m_Layer: 0
   m_Name: shootingRange
   m_TagString: Untagged
@@ -48,7 +48,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.0001
---- !u!114 &6996825524550747648
+--- !u!114 &4470769873337815374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,9 +57,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2892741984636488353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560039a124db86d408ca01fd5f2342e8, type: 3}
+  m_Script: {fileID: 11500000, guid: c7437b202aa453d4eb10a29fb1e0786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AI: {fileID: -2771108770659569342}
 --- !u!1 &2892741984819206727
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ GameObject:
   - component: {fileID: 2892741984819206723}
   - component: {fileID: -8845110534371462679}
   - component: {fileID: 5429918398773621100}
-  - component: {fileID: 3825004819053050916}
+  - component: {fileID: -2771108770659569342}
   m_Layer: 0
   m_Name: rocketeer
   m_TagString: Untagged
@@ -209,7 +210,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   vibrator: {fileID: 0}
---- !u!114 &3825004819053050916
+  isTownhall: 0
+  vicScreen: {fileID: 0}
+  defScreen: {fileID: 0}
+  hud: {fileID: 0}
+  goldCounter: {fileID: 0}
+--- !u!114 &-2771108770659569342
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,17 +224,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2892741984819206727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f7206a7e5ca6d74a9c69a709fae9748, type: 3}
+  m_Script: {fileID: 11500000, guid: f694629c3db02e647b217d421a316eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   goTo: {fileID: 0}
-  moveSpeed: 0.04
-  fireRate: 1
+  detection: {fileID: 1883182291578510918}
+  shootingRange: {fileID: 2892741984636488383}
+  bullet: {fileID: 3313625425931270447, guid: 3fb07cad2d828dd428e797bf5b8c2ae1, type: 3}
   damage: 30
+  fireRate: 1
+  moveSpeed: 0.04
   detectionRange: 2.5
-  shootRange: 2
-  canShoot: 0
-  bullet: {fileID: 1944847441598328430, guid: 5735c6d87db653e4aa97b16f7689ca6e, type: 3}
+  shootingRange_value: 2
 --- !u!1 &4844564966741248905
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,8 +245,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5900599263501451801}
-  - component: {fileID: 8006385208013593796}
   - component: {fileID: 1883182291578510918}
+  - component: {fileID: 5154891619504947923}
   m_Layer: 0
   m_Name: detectionRange
   m_TagString: Untagged
@@ -261,18 +268,6 @@ Transform:
   m_Father: {fileID: 2892741984819206722}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8006385208013593796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4844564966741248905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6de10ad8ecdce439b3fd7071c4d9fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1883182291578510918
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -289,3 +284,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &5154891619504947923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4844564966741248905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9972012a6480234a90343e5332a0dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AI: {fileID: -2771108770659569342}

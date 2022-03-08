@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3937024403482468951}
-  - component: {fileID: 6875801897229242815}
   - component: {fileID: 8085572207715312158}
+  - component: {fileID: 6375921339910318683}
   m_Layer: 0
   m_Name: detectionRange
   m_TagString: Untagged
@@ -32,18 +32,6 @@ Transform:
   m_Father: {fileID: 7938738523548265546}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6875801897229242815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222663408623349528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6de10ad8ecdce439b3fd7071c4d9fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &8085572207715312158
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -60,6 +48,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6375921339910318683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222663408623349528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9972012a6480234a90343e5332a0dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AI: {fileID: 5104915305357606459}
 --- !u!1 &7938738522850655157
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7938738522850655154}
   - component: {fileID: 7938738522850655155}
-  - component: {fileID: 5524209984766608089}
+  - component: {fileID: 6745619845666996478}
   m_Layer: 0
   m_Name: shootingRange
   m_TagString: Untagged
@@ -108,7 +109,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.0001
---- !u!114 &5524209984766608089
+--- !u!114 &6745619845666996478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,9 +118,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7938738522850655157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560039a124db86d408ca01fd5f2342e8, type: 3}
+  m_Script: {fileID: 11500000, guid: c7437b202aa453d4eb10a29fb1e0786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AI: {fileID: 5104915305357606459}
 --- !u!1 &7938738523548265551
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +135,7 @@ GameObject:
   - component: {fileID: 7938738523548265547}
   - component: {fileID: -7233734216573534564}
   - component: {fileID: -5508465757634320647}
-  - component: {fileID: 7752001937806720065}
+  - component: {fileID: 5104915305357606459}
   m_Layer: 0
   m_Name: fighterjet
   m_TagString: Untagged
@@ -269,7 +271,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 80
   vibrator: {fileID: 0}
---- !u!114 &7752001937806720065
+  isTownhall: 0
+  vicScreen: {fileID: 0}
+  defScreen: {fileID: 0}
+  hud: {fileID: 0}
+  goldCounter: {fileID: 0}
+--- !u!114 &5104915305357606459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,14 +285,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7938738523548265551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f7206a7e5ca6d74a9c69a709fae9748, type: 3}
+  m_Script: {fileID: 11500000, guid: f694629c3db02e647b217d421a316eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   goTo: {fileID: 0}
-  moveSpeed: 0.07
-  fireRate: 1
+  detection: {fileID: 8085572207715312158}
+  shootingRange: {fileID: 7938738522850655155}
+  bullet: {fileID: 3313625425931270447, guid: 3fb07cad2d828dd428e797bf5b8c2ae1, type: 3}
   damage: 30
+  fireRate: 1
+  moveSpeed: 0.07
   detectionRange: 3.5
-  shootRange: 2
-  canShoot: 0
-  bullet: {fileID: 1944847441598328430, guid: 5735c6d87db653e4aa97b16f7689ca6e, type: 3}
+  shootingRange_value: 2
