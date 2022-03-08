@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemyAI : MonoBehaviour
 {
-    float waitTime = 4;
+    float waitTime = 5;
     unitBuilding[] unitBuildings;
 
     void Start()
@@ -12,15 +12,15 @@ public class enemyAI : MonoBehaviour
         unitBuildings = GameObject.Find("enemyBuildings").GetComponentsInChildren<unitBuilding>();
         StartCoroutine(AI());
     }
-    // spawns random amount (2-8) of random units every set time
+    // spawns random amount (4-7) of random units every set time
     IEnumerator AI()
     {
         while(true)
         {
             yield return new WaitForSeconds(waitTime);
-            waitTime = 8;
+            waitTime = 7;
             Debug.Log("spawn wave");
-            int spawnAmount = Random.Range(2, 9);
+            int spawnAmount = Random.Range(4, 8);
             for(int i = 0; i < spawnAmount; i++)
             {
                 int whichBuilding = Random.Range(0, 3);

@@ -100,6 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 400
   vibrator: {fileID: 2597448637565962085}
+  isTownhall: 0
+  vicScreen: {fileID: 0}
+  defScreen: {fileID: 0}
+  hud: {fileID: 0}
+  goldCounter: {fileID: 0}
 --- !u!61 &4027947019665426370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4027947020207721258}
   - component: {fileID: 4027947020207721256}
-  - component: {fileID: 4027947020207721257}
+  - component: {fileID: 2435539516421246120}
   m_Layer: 0
   m_Name: shootingRange
   m_TagString: Untagged
@@ -186,7 +191,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
---- !u!114 &4027947020207721257
+--- !u!114 &2435539516421246120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,12 +200,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4027947020207721259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c18c3478ded0ed4e86256011ee825dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 8552aa1e4f353254c9355ae8fbbff60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  fireRate: 0.4
+  bullet: {fileID: 4280691189494892579, guid: 5c474f8f389f68a4c977b37c098152ec, type: 3}
   damage: 10
-  bullet: {fileID: 4689044220123164674, guid: 10d6a695219760b4bae1cd269f67adef, type: 3}
+  fireRate: 0.4
+  shootingRange: {fileID: 4027947020207721256}
   hasMiniGun: 0
   hasCannon: 0

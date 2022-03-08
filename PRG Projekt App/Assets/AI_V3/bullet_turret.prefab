@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3313625425931270447
+--- !u!1 &4280691189494892579
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3313625425931270441}
-  - component: {fileID: 3313625425931270446}
-  - component: {fileID: 7415630169116425430}
+  - component: {fileID: 2113833924473779846}
+  - component: {fileID: 5580423995666518611}
+  - component: {fileID: 3717151606046082109}
   m_Layer: 0
-  m_Name: bullet
+  m_Name: bullet_turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3313625425931270441
+--- !u!4 &2113833924473779846
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3313625425931270447}
+  m_GameObject: {fileID: 4280691189494892579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3313625425931270446
+--- !u!212 &5580423995666518611
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3313625425931270447}
+  m_GameObject: {fileID: 4280691189494892579}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,25 +77,26 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.29, y: 0.61}
+  m_Size: {x: 0.29357797, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7415630169116425430
+--- !u!114 &3717151606046082109
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3313625425931270447}
+  m_GameObject: {fileID: 4280691189494892579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fec4fa278f9ee4389c21f1aa0fe686, type: 3}
+  m_Script: {fileID: 11500000, guid: 798d0c0875c7c154caab7f044260f8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AI: {fileID: 0}
-  moveSpeed: 0.25
-  goTo: {fileID: 0}
   damage: 0
+  goTo: {fileID: 0}
+  moveSpeed: 0.25
+  hasMiniGun: 0
+  hasCannon: 0

@@ -19,7 +19,7 @@ public class unlockUpgrade : MonoBehaviour
             return;
         }
         GameObject.Find("goldCounter").GetComponent<currency>().gold -= price;
-        foreach(turretAI_V2 go in GameObject.Find("playerTurrets").GetComponentsInChildren<turretAI_V2>())
+        foreach(turret_AI go in GameObject.Find("playerTurrets").GetComponentsInChildren<turret_AI>())
         {
             go.hasMiniGun = true;
         }
@@ -34,7 +34,7 @@ public class unlockUpgrade : MonoBehaviour
             return;
         }
         GameObject.Find("goldCounter").GetComponent<currency>().gold -= price;
-        foreach(turretAI_V2 go in GameObject.Find("playerTurrets").GetComponentsInChildren<turretAI_V2>())
+        foreach(turret_AI go in GameObject.Find("playerTurrets").GetComponentsInChildren<turret_AI>())
         {
             go.hasCannon = true;
         }
